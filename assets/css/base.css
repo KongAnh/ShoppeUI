@@ -168,3 +168,260 @@ html {
 .select-input__link:hover {
     color: var(--primary-color);
 }
+
+/* Pagination */
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item--active {
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+.pagination-item--active .pagination-item__link {
+    color: var(--white-color);
+
+}
+.pagination-item--active .pagination-item__link:hover {
+    color: var(--white-color);
+    background-color: #f67054;
+    border-radius: 2px;
+}
+
+.pagination-item__link {
+    text-decoration: none;
+    color: #00000066;
+    min-width: 40px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 30px;
+    height: 30px;
+    display: block;
+}
+
+.pagination-item__link:hover {
+    color: var(--primary-color);
+}
+
+.pagination-item__icon {
+
+}
+
+
+/* Footer */
+.footer {
+    border-top: 4px solid var(--primary-color);
+    padding-top: 22px;
+    background-color: var(--white-color);
+}
+
+.footer__header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 24px;
+}
+
+.footer__heading {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.footer-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-item__link {
+    display: block;
+    font-size: 1.2rem;
+    color: #777;
+    text-decoration: none;
+    padding: 6px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-item__link:hover {
+    color: var(--primary-color);
+}
+
+.footer-item__icon {
+    margin: -1px 6px 0;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.footer__download {
+    display: flex;
+}
+.footer__download-qr-img {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--border-color);
+}
+
+.footer__download-apps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer__download-app-link {
+    text-decoration: none;
+    color: transparent;
+}
+
+.footer__download-app-img {
+    height: 20px;
+    padding: 2px 6px;
+}
+
+.footer__body {
+    padding: 42px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-validation {
+    font-size: 1.4rem;
+    color: #777;
+}
+
+.footer-region {
+    margin: 0;
+    color: #777;
+    font-size: 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer-region__link {
+    text-align: center;
+    text-decoration: none;
+    color: #777;
+    display: inline-block;
+    padding: 0 4px;
+    border-right: 1px solid var(--border-color) ;
+}
+
+.footer-bottom {
+    padding: 42px 0;
+    background-color: #f5f5f5;
+}
+
+.footer-policy {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 42px;
+}
+
+.footer-policy__item-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #777;
+    font-size: 1.4rem;
+    padding: 0 28px;
+    border-right: 1px solid var(--border-color);
+}
+
+.footer-policy__item:last-child .footer-policy__item-link {
+    border: none;
+}
+
+.footer-certificate {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-certificate__link {
+    display: inline-block;
+    padding: 0 28px;
+}
+
+.footer-more-info {
+    text-align: center;
+    color: #777;
+    margin: 6px 0;
+    font-size: 1.2rem;
+}
+.footer-more-info--cty {
+    margin: 6px 0 22px;
+    font-size: 1.4rem;
+}
+
+/* Footer image */
+.footer-list-img {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    width: 190px;
+    margin: 0 0 18px;
+}
+
+.footer-item-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 29px;
+    margin: 0 8px 8px 0;
+    overflow: hidden;
+}
+
+.footer-vn-background {
+    background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/a243382e0d0a26d2fe13aaba46f7ea18.png);
+}
+
+.footer-vn-visa-png {
+    background-size: 1349.090909090909% 1194.4444444444443%;
+    background-position: 83.4061135371179% 5.0761421319796955%;
+}
+
+.footer-vn-mastercard-png {
+    background-size: 1349.090909090909% 741.3793103448276%;
+    background-position: 53.42066957787482% 5.376344086021505%;
+}
+
+
+.footer-vn-jcb-png {
+    background-size: 1349.090909090909% 934.7826086956521%;
+    background-position: 38.427947598253276% 30.729166666666668%;
+}
+
+.footer-vn-amex-png {
+    background-size: 1484% 977.2727272727273%;
+    background-position: 1.4450867052023122% 5.181347150259067%;
+}
+
+.footer-vn-vn_cod_footer-png {
+    background-size: 1484% 741.3793103448276%;
+    background-position: 89.45086705202313% 25.806451612903224%;
+}
+
+.footer-vn-vn_installment_footer-png {
+    background-size: 1349.090909090909% 741.3793103448276%;
+    background-position: 90.1018922852984% 52.1505376344086%;
+}
+
+.footer-vn-shopeepay-png {
+    background-size: 742% 1131.578947368421%;
+    background-position: 73.3644859813084% 24.489795918367346%;
+}
+
+.footer-vn-vn_registered_red-png {
+    background-size: 618.3333333333334% 477.77777777777777%;
+    background-position: 34.08360128617363% 65.29411764705883%;
+}
+
+.footer-vn-vn_no_fake_item-png {
+    background-size: 1545.8333333333333% 447.9166666666667%;
+    background-position: 100% 27.54491017964072%;
+}
