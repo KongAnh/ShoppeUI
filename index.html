@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css"> 
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="https://kit.fontawesome.com/b465500eae.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -16,7 +17,7 @@
     <div class="main">
         <header class="header">
             <div class="grid wide">
-                <nav class="header__navbar">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="navbar__list">
                         <li class="navbar__item navbar__item--separate">Kênh người bán</li>
                         <li class="navbar__item navbar__item--separate">Trở thành người bán Shopee</li>
@@ -135,6 +136,14 @@
 
                 <!-- Header with search -->
                 <nav class="header-with-search">
+                    <div class="header-mobile-search-wrap">
+                        <label for="mobile-bar-checkbox" class="header-mobile-bar">
+                            <i class="header-mobile-bar-icon fa-solid fa-bars"></i>
+                        </label>
+                        <label for="mobile-search-checkbox" class="header-mobile-search">
+                            <i class="header-mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+                    </div>
                     <div class="header__logo">
                         <a href="/" class="header__logo-link">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
@@ -145,6 +154,23 @@
                             </svg>
                         </a>
                     </div>
+                    <input type="checkbox" hidden id="mobile-bar-checkbox" class="header__bar-checkbox">
+                    <!-- Mobile menu -->
+                    <label for="mobile-bar-checkbox" class="mobile-menu-overlay"></label>
+                    <ul class="header-mobile-menu">
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__item-link">Tài khoản của tôi</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__item-link">Đơn mua</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="" class="mobile-menu__item-link">Đăng xuất</a>
+                        </li>
+                    </ul>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+                    <label for="mobile-search-checkbox" class="search__overlay"></label>
                     <div class="header__search">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Tìm kiếm">
@@ -225,11 +251,22 @@
                     </div>
                 </nav>
             </div>
+            <ul class="header-sort-bar">
+                <li class="sort-bar__item sort-bar__item--active">
+                    <a href="" class="sort-bar__item-link">Phổ Biến</a>
+                </li>
+                <li class="sort-bar__item">
+                    <a href="" class="sort-bar__item-link">Mới Nhất</a>
+                </li>
+                <li class="sort-bar__item">
+                    <a href="" class="sort-bar__item-link">Bán Chạy</a>
+                </li>
+            </ul>
         </header>
         <div class="app__container">
             <div class="grid wide">
-                <div class="row">
-                    <div class="col l-2">
+                <div class="row sm-gutter app-content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">
                                 <i class="category__heading-icon fa-solid fa-list"></i>
@@ -259,8 +296,8 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col l-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn btn--primary-2">Phổ biến</button>
                             <button class="home-filter__btn btn">Mới nhất</button>
@@ -294,10 +331,51 @@
                                 </div>
                             </div>
                         </div>
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Sản phẩm</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Hàng mới về</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Truyện định kì</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Truyện bộ</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Sản phẩm</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Hàng mới về</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Truyện định kì</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Truyện bộ</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Sản phẩm</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Hàng mới về</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Truyện định kì</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="" class="mobile-category__link">Truyện bộ</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="row">
+                            <div class="row sm-gutter">
                                 <!-- Product item -->
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -330,7 +408,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -363,7 +441,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -396,7 +474,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -429,7 +507,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -462,7 +540,8 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -495,7 +574,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -528,7 +607,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -561,7 +640,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -594,7 +673,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="col l-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a href="" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/f5f4d4e9ac149f19981dd87c7ef802b1_tn);"></div>
                                         <h4 class="home-product-item__name">Truyện tranh Nhà có 5 nàng dâu - Tập 10 - Tặng kèm Postcard - NXB Kim Đồng</h4>
@@ -667,7 +746,7 @@
         <footer class="footer">
             <div class="grid wide">
                 <div class="footer__header row">
-                    <div class="col l-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -690,7 +769,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col l-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">VỀ SHOPPE</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -713,7 +792,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col l-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">THANH TOÁN</h3>
                         <ul class="footer-list-img">
                             <li class="footer-item-img">
@@ -738,7 +817,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col l-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -761,7 +840,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col l-2-4">
+                    <div class="col l-2-4 m-4 c-12">
                         <h3 class="footer__heading">TẢI ỨNG DỤNG SHOPPE</h3>
                         <div class="footer__download">
                             <img src="./assets/img/Qr_code.png" alt="" class="footer__download-qr-img">
@@ -782,10 +861,10 @@
                 </div>
 
                 <div class="footer__body row">
-                    <div class="col l-4">
+                    <div class="col l-4 m-12 c-12">
                         <span class="footer-validation">© 2022 Shopee. Tất cả các quyền được bảo lưu.</span>
                     </div>
-                    <div class="col l-8">
+                    <div class="col l-8 m-12 c-12">
                         <p class="footer-region">Quốc gia & Khu vực:
                             <a href="" class="footer-region__link">Singapore</a>
                             <a href="" class="footer-region__link">Indonesia</a>
